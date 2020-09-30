@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <center>
+	<h1 class="ui header">Community Leaderboard</h1>
+  </center>
+
+	{% if current_user.is_authenticated %}
+  <br>
+  <center>
+    <img src="../static/img/leaderboard.svg"
+  alt="ranking"
+  height="600px"
+  width="800px" ">
+  </center>
+	{% endif %}
+
+{% endblock %}

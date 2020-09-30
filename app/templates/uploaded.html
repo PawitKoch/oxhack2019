@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Numeric JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<body>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 2px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    </head>
+<body>
+  <center>
+<h2>Results</h2>
+<br>
+</center>
+  <div class="container">
+    <div class="row" style="display: flex; flex-direction: column; justify-content: center; align-content: center;">
+        <div class="col-sm-10 my-auto">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="../static/img/{{user_image}}" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h3>
+                            Congratulations!</h3>
+                        <h3>
+                        You have saved {{carbon}} kg in carbon emissions in recycling this item</h3
+                        <!-- Split button -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary">
+                                Share</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Share</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Probability</th>
+  </tr>
+  {% for k,v in predictions.items()%}
+  <tr>
+    <td>{{k}}</td>
+    <td>{{v}}%</td>
+  </tr>
+  {% endfor %}
+  </table>
+
+<div class="chart" id="graph">
+    <script>
+        var graphs = {{plot | safe}};
+        Plotly.plot('graph',graphs,{});
+    </script>
+</div>
+</body>
+</html>
+    <title>Index</title>
+</head>
+<body>
+</body>
+</html>
+
+
+{% endblock %}
