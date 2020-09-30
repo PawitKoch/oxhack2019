@@ -1,6 +1,8 @@
 import logging
 
 from app.config_common import *
+from flask import current_app
+import os
 
 
 # DEBUG can only be set to True in a development environment for security reasons
@@ -33,5 +35,5 @@ LOG_FILENAME = 'activity.log'
 LOG_MAXBYTES = 1024
 LOG_BACKUPS = 2
 
-UPLOAD_FOLDER = '/Users/ultimate_asian/Desktop/OxHack19/test_data/'
-PAST_DATA = '/Users/ultimate_asian/Desktop/OxHack19/toy_data/environmentalist1.csv'
+UPLOAD_FOLDER = current_app.root_path+'/test_data/'
+PAST_DATA = current_app.root_path+'/toy_data/environmentalist1.csv'
