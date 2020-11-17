@@ -3,12 +3,12 @@ from azure.cognitiveservices.vision.customvision.prediction import CustomVisionP
 ENDPOINT = "https://westeurope.api.cognitive.microsoft.com/"
 
 # Replace with a valid key
-training_key = "70218db9f6f648b5b300774a835628a4"
-prediction_key = "423c23bf69f44f2c83780e2c7ac16e9a"
-prediction_resource_id = "/subscriptions/09220dc7-b210-4fe4-a9b8-c2c74d4983e2/resourceGroups/Test1/providers/Microsoft.CognitiveServices/accounts/Custom_Training"
+training_key = "***********"
+prediction_key = "***********"
+prediction_resource_id = "***********"
 
 publish_iteration_name = "FinalIteration"
-project_id = "39ee7be7-fce5-447b-8650-96b32acdd3d1"
+project_id = "***********"
 
 
 def predict(image_path):
