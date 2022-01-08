@@ -1,4 +1,6 @@
 *.db
 *.log
 *.pyc
+*.DS_Store
+*.DS_Store?
 config.py
