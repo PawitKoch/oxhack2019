@@ -1,4 +1,6 @@
-# OxHack 2019 Flask Carbon Capture Project (w/ Flask boilerplate code)
+# OxHack 2019 Carbon Capture Project
+
+N.B this project was built upon a Flask boilerplate repo
 
 ## Features
 
@@ -12,7 +14,7 @@
 
 ## Structure
 
-I did what most people recommend for the application's structure. Basically, everything is contained in the `app/` folder.
+Everything is contained in the `app/` folder.
 
 - There you have the classic `static/` and `templates/` folders. The `templates/` folder contains macros, error views and a common layout.
 - I added a `views/` folder to separate the user and the website logic, which could be extended to the the admin views.
@@ -24,8 +26,6 @@ I did what most people recommend for the application's structure. Basically, eve
 
 
 ## Setup
-
-### Vanilla
 
 - Install the requirements and setup the development environment.
 
