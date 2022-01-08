@@ -5,13 +5,7 @@
 - [x] Image Upload, with computer vision prediction handler (Azure Cognitive Services).
 - [x] Prediction table plotter with plotly, pandas on results page.
 - [x] User account sign up, sign in, password reset, all through asynchronous email confirmation.
-- [x] Form generation.
-- [x] Error handling.
-- [x] HTML macros and layout file.
-- [x] "Functional" file structure.
 - [x] Python 3.x compliant.
-- [x] Asynchronous AJAX calls.
-- [x] Administration panel.
 - [x] Virtual environment example.
 - [x] Digital Ocean deployment example.
 - [x] Logging.
@@ -53,7 +47,7 @@ I did what most people recommend for the application's structure. Basically, eve
 ``
 pip install virtualenv
 virtualenv venv
-venv/bin/activate (venv\scripts\activate on Windows)
+venv/bin/activate
 make install
 make dev
 python manage.py initdb
